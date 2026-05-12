@@ -1,0 +1,51 @@
+.tc-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 16px 20px 24px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* show only on coarse-pointer (touch) devices */
+@media (pointer: coarse) {
+  .tc-overlay { display: flex; }
+}
+
+.tc-left {
+  display: flex;
+  gap: 10px;
+}
+
+.tc-btn {
+  pointer-events: all;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.45);
+  color: rgba(255,255,255,0.8);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.tc-btn:active, .tc-btn:focus { background: rgba(74,143,255,0.4); outline: none; }
+
+.tc-jump-btn {
+  width: 72px;
+  height: 72px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: rgba(74,143,255,0.3);
+  border-color: rgba(74,143,255,0.6);
+}
